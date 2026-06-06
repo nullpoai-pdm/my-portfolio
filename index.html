@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Works — Portfolio</title>
+  <meta name="description" content="iOSアプリ・Webサービス・Chrome拡張機能など、個人開発作品集">
+  <meta property="og:title" content="Works — Portfolio">
+  <meta property="og:description" content="個人開発作品集">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #F5F5F3;
+      --card:     #FFFFFF;
+      --text:     #111110;
+      --muted:    #6B6B68;
+      --faint:    #B2B1AE;
+      --accent:   #111110;
+      --border:   rgba(0, 0, 0, 0.08);
+      --r:        16px;
+      --ease:     cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ──────────────────────────────
+       NAV
+    ────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: 58px;
+      padding: 0 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      backdrop-filter: blur(20px) saturate(160%);
+      -webkit-backdrop-filter: blur(20px) saturate(160%);
+      background: rgba(245, 245, 243, 0.88);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-brand {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      /* ↓ Replace with your name */
+      color: var(--text);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    /* ──────────────────────────────
+       HERO
+    ────────────────────────────── */
+    .hero {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 88px 48px 72px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-family: 'Space Grotesk', 'Noto Sans JP', sans-serif;
+      font-size: clamp(44px, 6.5vw, 80px);
+      font-weight: 700;
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      color: var(--text);
+      margin-bottom: 32px;
+    }
+
+    .hero-title em {
+      font-style: normal;
+      color: var(--muted);
+    }
+
+    .hero-body {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--muted);
+      max-width: 460px;
+    }
+
+    /* ──────────────────────────────
+       WORKS SECTION
+    ────────────────────────────── */
+    .works-header {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 8px 48px 28px;
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .works-header h2 {
+      font-family: 'Space Grotesk', 'Noto Sans JP', sans-serif;
+      font-size: clamp(36px, 4vw, 52px);
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      color: var(--text);
+    }
+
+    .works-header span {
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 400;
+      white-space: nowrap;
+      padding-bottom: 6px;
+    }
+
+    .works-grid {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 48px 100px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 1fr;
+      gap: 20px;
+    }
+
+    /* ──────────────────────────────
+       CARD
+    ────────────────────────────── */
+    .card {
+      background: var(--card);
+      border-radius: var(--r);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 24px 52px rgba(0, 0, 0, 0.10);
+    }
+
+    /* Thumb */
+    .card-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* App icons — centered on a colored background */
+    .thumb-icon img {
+      width: 38%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 22%;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.22);
+    }
+
+    /* Screenshots / OGP — larger, lightly rounded */
+    .thumb-icon img.thumb-shot {
+      width: 86%;
+      border-radius: 8px;
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.16);
+    }
+
+    /* Body */
+    .card-body {
+      padding: 20px 22px 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* Badges */
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      padding: 3px 8px;
+      border-radius: 5px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+
+    .badge-ios    { background: #EAEAE8; color: #4A4A47; }
+    .badge-web    { background: #EAEAE8; color: #4A4A47; }
+    .badge-chrome { background: #EAEAE8; color: #4A4A47; }
+    .badge-paid   { background: #1A1A18; color: #FFFFFF; }
+    .badge-free   { background: #EAEAE8; color: var(--muted); }
+
+    /* Title */
+    .card-name {
+      font-family: 'Space Grotesk', 'Noto Sans JP', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      color: var(--text);
+    }
+
+    .card-name-ja {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* Description */
+    .card-desc {
+      font-size: 13.5px;
+      line-height: 1.7;
+      color: var(--muted);
+      flex: 1;
+      text-wrap: pretty;
+    }
+
+    /* Footer */
+    .card-foot {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 6px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 7px 13px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+      border: 1.5px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: var(--text);
+      color: #fff;
+      border-color: var(--text);
+    }
+
+    .btn-primary {
+      background: var(--text);
+      color: #fff;
+      border-color: var(--text);
+    }
+
+    .btn-primary:hover {
+      background: #000000;
+      border-color: #000000;
+    }
+
+    /* ──────────────────────────────
+       ABOUT
+    ────────────────────────────── */
+    .about {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 72px 48px 80px;
+      border-top: 1px solid var(--border);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .about h2 {
+      font-family: 'Space Grotesk', 'Noto Sans JP', sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--muted);
+      text-wrap: pretty;
+    }
+
+    .about p + p {
+      margin-top: 12px;
+    }
+
+    .link-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .link-list li a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 0;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+      transition: color 0.15s;
+    }
+
+    .link-list li a:hover { color: var(--text); }
+
+    .link-list li a .link-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .link-arrow {
+      margin-left: auto;
+      color: var(--faint);
+      font-size: 16px;
+    }
+
+    /* ──────────────────────────────
+       FOOTER
+    ────────────────────────────── */
+    footer {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px 48px 52px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border);
+    }
+
+    footer small {
+      font-size: 12.5px;
+      color: var(--faint);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 22px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 12.5px;
+      color: var(--muted);
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover { color: var(--text); }
+
+    /* ──────────────────────────────
+       RESPONSIVE
+    ────────────────────────────── */
+    @media (max-width: 960px) {
+      .works-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    @media (max-width: 640px) {
+      nav          { padding: 0 20px; }
+      .hero        { padding: 56px 20px 48px; }
+      .works-header { padding: 8px 20px 20px; }
+      .works-grid  { grid-template-columns: 1fr; padding: 0 20px 72px; }
+      .about       { padding: 52px 20px 64px; }
+      footer       { padding: 24px 20px 40px; flex-direction: column; gap: 14px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav>
+  <span class="nav-brand">Nullko</span>
+  <ul class="nav-links">
+    <li><a href="#works">Works</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+</nav>
+
+<!-- ─── HERO ─── -->
+<header class="hero">
+  <span class="hero-tag">Individual Developer</span>
+  <h1 class="hero-title">
+    今までつくった<br>
+    <em>もの。</em>
+  </h1>
+  <p class="hero-body">
+    2026年2月からAIを使った個人開発をスタート。<br>
+    勉強半分・趣味半分で、iOSアプリやWebサービスを作っています。
+  </p>
+</header>
+
+<!-- ─── WORKS ─── -->
+<section id="works">
+  <div class="works-header">
+    <h2>Works</h2>
+    <span>5 projects</span>
+  </div>
+
+  <div class="works-grid">
+
+    <!-- ── 1. DoneLayer ── -->
+    <article class="card">
+      <div class="card-thumb thumb-icon" style="background: #1A1C14;">
+        <img src="uploads/donelayer-icon.png" alt="DoneLayer">
+      </div>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge badge-ios">iOS / iPad</span>
+          <span class="badge badge-web">Web</span>
+          <span class="badge badge-paid">サブスク ¥200/月〜</span>
+        </div>
+        <div>
+          <h3 class="card-name">DoneLayer</h3>
+          <p class="card-name-ja">AIタスク管理</p>
+        </div>
+        <p class="card-desc">URLを貼るとAIがタスク化する積読解消アプリ。iPhone・Webブラウザに対応。日本語・英語をサポート。</p>
+        <div class="card-foot">
+          <a href="https://donelayer.app/" target="_blank" rel="noopener" class="btn btn-primary">Web →</a>
+          <a href="https://apps.apple.com/jp/app/ai%E3%82%BF%E3%82%B9%E3%82%AF%E7%AE%A1%E7%90%86-donelayer/id6766066293" target="_blank" rel="noopener" class="btn">App Store</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── 2. 今日何食べる？ ── -->
+    <article class="card">
+      <div class="card-thumb thumb-icon" style="background: #EAE4F4;">
+        <img src="uploads/kondate-icon.png" alt="今日何食べる？">
+      </div>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge badge-ios">iOS / iPad</span>
+          <span class="badge badge-free">無料</span>
+        </div>
+        <div>
+          <h3 class="card-name">今日何食べる？</h3>
+          <p class="card-name-ja">こどもの献立えらび</p>
+        </div>
+        <p class="card-desc">「今日何食べたい？」と聞かれても決められない子どものために、くじ引き感覚で献立を選んでくれるアプリ。</p>
+        <div class="card-foot">
+          <a href="https://apps.apple.com/jp/app/%E4%BB%8A%E6%97%A5%E3%81%AA%E3%81%AB%E9%A3%9F%E3%81%B9%E3%82%8B-%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E7%8C%AE%E7%AB%8B%E3%81%88%E3%82%89%E3%81%B3/id6760831315" target="_blank" rel="noopener" class="btn btn-primary">App Store →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── 3. タブネコ ── -->
+    <article class="card">
+      <div class="card-thumb thumb-icon" style="background: #F0E9DE;">
+        <img src="uploads/05-overwork-30-tabs-ja.png" alt="タブネコ" class="thumb-shot">
+      </div>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge badge-chrome">Chrome拡張</span>
+          <span class="badge badge-free">無料</span>
+        </div>
+        <div>
+          <h3 class="card-name">タブネコ</h3>
+          <p class="card-name-ja">新しいタブに猫が住みつく</p>
+        </div>
+        <p class="card-desc">Chromeの新しいタブを開くたびに猫が疲弊するChrome拡張機能。不要なタブを閉じてネコとメモリを解放してあげてください。</p>
+        <div class="card-foot">
+          <a href="https://chromewebstore.google.com/detail/%E3%82%BF%E3%83%96%E3%83%8D%E3%82%B3/ocldpajibcdhnkgmoobobkolpppikipf" target="_blank" rel="noopener" class="btn btn-primary">Chrome Web Store →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── 4. Gaku-Sim ── -->
+    <article class="card">
+      <div class="card-thumb thumb-icon" style="background: #D6EAF8;">
+        <img src="uploads/service_Icon.png" alt="Gaku-Sim">
+      </div>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge badge-web">Web</span>
+          <span class="badge badge-free">無料</span>
+        </div>
+        <div>
+          <h3 class="card-name">Gaku-Sim</h3>
+          <p class="card-name-ja">教育費と投資のシミュレーター</p>
+        </div>
+        <p class="card-desc">子どもの教育費（未就学児〜大学）と、今から始める投資をセットでシミュレートできるWebツール。</p>
+        <div class="card-foot">
+          <a href="https://gaku-sim.com/" target="_blank" rel="noopener" class="btn btn-primary">Webを見る →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── 5. 未実装供養 R.I.P ── -->
+    <article class="card">
+      <div class="card-thumb thumb-icon" style="background: #080808;">
+        <img src="uploads/ogp.png" alt="R.I.P" class="thumb-shot">
+      </div>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge badge-web">Web</span>
+          <span class="badge badge-free">無料</span>
+        </div>
+        <div>
+          <h3 class="card-name">R.I.P</h3>
+          <p class="card-name-ja">未実装供養</p>
+        </div>
+        <p class="card-desc">「実装したかったけど、できなかった」機能・アイデアを供養するWebサービス。開発者あるあるな後悔をみんなで共有。</p>
+        <div class="card-foot">
+          <a href="https://servicerip.pages.dev/" target="_blank" rel="noopener" class="btn btn-primary">Webを見る →</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div>
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;">
+        <img src="uploads/6IQbO82n_400x400.jpg" alt="Nullko" style="width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+        <h2 style="margin-bottom:0;">About</h2>
+      </div>
+      <p>WebとアプリのPdMとして約8年。普段は会社員として働きながら、小学生の子育ても。</p>
+      <p>2026年2月からAIを活用した個人開発をスタートしました。勉強半分・趣味半分、少しの副業昇格野望を持ちながら、日常の小さな課題を解くプロダクトを作り続けています。</p>
+    </div>
+    <div>
+      <ul class="link-list">
+        <!-- Note -->
+        <li>
+          <a href="https://note.com/ai_pdm" target="_blank" rel="noopener">
+            <span class="link-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" opacity="0.6">
+                <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm3 5a1 1 0 0 0 0 2h8a1 1 0 0 0 0-2H8zm0 4a1 1 0 0 0 0 2h8a1 1 0 0 0 0-2H8zm0 4a1 1 0 0 0 0 2h5a1 1 0 0 0 0-2H8z"/>
+              </svg>
+            </span>
+            note
+            <span class="link-arrow">↗</span>
+          </a>
+        </li>
+        <!-- X / Twitter -->
+        <li>
+          <a href="https://x.com/AI_PdM_Nullpo" target="_blank" rel="noopener">
+            <span class="link-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" opacity="0.6">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </span>
+            X (Twitter)
+            <span class="link-arrow">↗</span>
+          </a>
+        </li>
+        <!-- App Store Developer Page (optional) -->
+        <li>
+          <a href="https://apps.apple.com/jp/developer/sayaka-kamiya/id1886436594" target="_blank" rel="noopener">
+            <span class="link-icon">
+              <svg width="14" height="16" viewBox="0 0 814 1000" fill="currentColor" opacity="0.6">
+                <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-57.8-155.5-127.4C46 376.7 0 248.7 0 164.3c0-137.2 89.1-210.2 176.1-210.2 47.4 0 86.7 31.1 116.4 31.1 28.3 0 73.1-33.1 127.4-33.1 20.4 0 108.2 1.9 168.6 81.2zm-47.4-145.9c-4.5-22.6-17.3-62.3-50.7-93.5-50.1-46.3-114-29.2-114.9-29.2l1.9 130.7c0 1.9 75.3 21.5 121.7-48.6 15.9-23.6 22-49.7 42-49.7z"/>
+              </svg>
+            </span>
+            App Store
+            <span class="link-arrow">↗</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <small>© 2026 Nullko</small>
+  <ul class="footer-links">
+    <li><a href="https://x.com/" target="_blank" rel="noopener">X</a></li>
+    <li><a href="#works">Works</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>
