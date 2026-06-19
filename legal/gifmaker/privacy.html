@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" id="html-root">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,6 +37,15 @@
     nav a { font-size: 13px; color: var(--muted); text-decoration: none; }
     nav a:hover { color: var(--text); }
     nav span { color: var(--faint); font-size: 13px; }
+    .lang-toggle { margin-left: auto; display: flex; gap: 4px; }
+    .lang-btn {
+      font-size: 11px; font-weight: 700; padding: 3px 9px;
+      border: 1px solid var(--border); border-radius: 4px;
+      background: transparent; cursor: pointer; color: var(--muted);
+      letter-spacing: 0.06em; font-family: inherit;
+    }
+    .lang-btn.active { background: var(--text); color: #fff; border-color: var(--text); }
+    .lang-btn:hover:not(.active) { border-color: var(--muted); }
     main {
       max-width: 680px; margin: 0 auto;
       padding: 48px 24px 80px;
@@ -63,6 +72,10 @@
       text-align: center; font-size: 12px;
       color: var(--faint); padding: 24px;
     }
+    /* Language switching */
+    .en { display: none; }
+    body.en .en { display: revert; }
+    body.en .ja { display: none; }
   </style>
 </head>
 <body>
@@ -71,68 +84,150 @@
     <span>/</span>
     <span style="color:var(--text);font-size:13px;font-weight:700;">GIF Maker</span>
     <span>/</span>
-    <span style="color:var(--text);font-size:13px;">プライバシーポリシー</span>
+    <span style="color:var(--text);font-size:13px;" class="ja">プライバシーポリシー</span>
+    <span style="color:var(--text);font-size:13px;" class="en">Privacy Policy</span>
+    <div class="lang-toggle">
+      <button id="btn-ja" class="lang-btn active" onclick="setLang('ja')">JA</button>
+      <button id="btn-en" class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
   </nav>
 
   <main>
     <div class="badge">GIF Maker</div>
-    <h1>プライバシーポリシー</h1>
-    <p class="meta">最終更新日：2025年6月19日</p>
 
-    <section>
-      <h2>1. はじめに</h2>
-      <p>本アプリ「GIF Maker」は、ユーザーのプライバシーを尊重し、個人情報の保護に努めています。本ポリシーでは、本アプリにおける情報の取り扱いについて説明します。</p>
-    </section>
+    <!-- Japanese -->
+    <div class="ja">
+      <h1>プライバシーポリシー</h1>
+      <p class="meta">最終更新日：2025年6月19日</p>
 
-    <section>
-      <h2>2. 収集する情報</h2>
-      <p>本アプリは、ユーザーの個人情報を一切収集しません。すべての処理（動画・画像のGIF変換）は端末内でのみ行われ、外部サーバーへのデータ送信は行いません。</p>
-    </section>
+      <section>
+        <h2>1. はじめに</h2>
+        <p>本アプリ「GIF Maker」は、ユーザーのプライバシーを尊重し、個人情報の保護に努めています。本ポリシーでは、本アプリにおける情報の取り扱いについて説明します。</p>
+      </section>
 
-    <section>
-      <h2>3. アクセスする端末機能</h2>
-      <p>本アプリは以下の端末機能へのアクセスを要求する場合があります。</p>
-      <ul style="margin-top:10px;">
-        <li><strong>フォトライブラリ（読み取り）</strong>：GIF変換対象の画像・動画を選択するため</li>
-        <li><strong>フォトライブラリ（書き込み）</strong>：生成したGIFを保存するため</li>
-      </ul>
-      <p style="margin-top:10px;">これらの権限はユーザーがコンテンツを選択する際にのみ使用され、バックグラウンドでの収集は行いません。</p>
-    </section>
+      <section>
+        <h2>2. 収集する情報</h2>
+        <p>本アプリは、ユーザーの個人情報を一切収集しません。すべての処理（動画・画像のGIF変換）は端末内でのみ行われ、外部サーバーへのデータ送信は行いません。</p>
+      </section>
 
-    <section>
-      <h2>4. アプリ内課金</h2>
-      <p>本アプリには有料機能（Pro版、買い切り¥120）が含まれます。課金処理はすべてApple Inc.のApp Storeを通じて行われます。クレジットカード情報その他の決済情報は本アプリが取得・保存することはありません。</p>
-    </section>
+      <section>
+        <h2>3. アクセスする端末機能</h2>
+        <p>本アプリは以下の端末機能へのアクセスを要求する場合があります。</p>
+        <ul style="margin-top:10px;">
+          <li><strong>フォトライブラリ（読み取り）</strong>：GIF変換対象の画像・動画を選択するため</li>
+          <li><strong>フォトライブラリ（書き込み）</strong>：生成したGIFを保存するため</li>
+        </ul>
+        <p style="margin-top:10px;">これらの権限はユーザーがコンテンツを選択する際にのみ使用され、バックグラウンドでの収集は行いません。</p>
+      </section>
 
-    <section>
-      <h2>5. 第三者への情報提供</h2>
-      <p>本アプリはユーザーの情報を第三者に販売・提供・開示することはありません。</p>
-    </section>
+      <section>
+        <h2>4. アプリ内課金</h2>
+        <p>本アプリには有料機能（Pro版、買い切り¥100）が含まれます。課金処理はすべてApple Inc.のApp Storeを通じて行われます。クレジットカード情報その他の決済情報は本アプリが取得・保存することはありません。</p>
+      </section>
 
-    <section>
-      <h2>6. アナリティクス・トラッキング</h2>
-      <p>本アプリは、広告トラッキングおよびサードパーティ製アナリティクスSDKを一切使用していません。</p>
-    </section>
+      <section>
+        <h2>5. 第三者への情報提供</h2>
+        <p>本アプリはユーザーの情報を第三者に販売・提供・開示することはありません。</p>
+      </section>
 
-    <section>
-      <h2>7. お子様のプライバシー</h2>
-      <p>本アプリは13歳未満のお子様を対象としていません。</p>
-    </section>
+      <section>
+        <h2>6. アナリティクス・トラッキング</h2>
+        <p>本アプリは、広告トラッキングおよびサードパーティ製アナリティクスSDKを一切使用していません。</p>
+      </section>
 
-    <section>
-      <h2>8. 本ポリシーの変更</h2>
-      <p>本ポリシーは予告なく変更される場合があります。最新版は本ページに掲載されます。</p>
-    </section>
+      <section>
+        <h2>7. お子様のプライバシー</h2>
+        <p>本アプリは13歳未満のお子様を対象としていません。</p>
+      </section>
 
-    <section>
-      <h2>9. お問い合わせ</h2>
-      <p>プライバシーに関するご質問は、下記よりお問い合わせください。</p>
-      <p style="margin-top:8px;"><a class="link" href="https://x.com/AI_PdM_Nullpo" target="_blank" rel="noopener">@AI_PdM_Nullpo</a></p>
-    </section>
+      <section>
+        <h2>8. 本ポリシーの変更</h2>
+        <p>本ポリシーは予告なく変更される場合があります。最新版は本ページに掲載されます。</p>
+      </section>
+
+      <section>
+        <h2>9. お問い合わせ</h2>
+        <p>プライバシーに関するご質問は、下記よりお問い合わせください。</p>
+        <p style="margin-top:8px;"><a class="link" href="https://x.com/AI_PdM_Nullpo" target="_blank" rel="noopener">@AI_PdM_Nullpo</a></p>
+      </section>
+    </div>
+
+    <!-- English -->
+    <div class="en">
+      <h1>Privacy Policy</h1>
+      <p class="meta">Last updated: June 19, 2025</p>
+
+      <section>
+        <h2>1. Introduction</h2>
+        <p>GIF Maker respects your privacy and is committed to protecting your personal information. This policy explains how information is handled within the app.</p>
+      </section>
+
+      <section>
+        <h2>2. Information We Collect</h2>
+        <p>The app collects no personal information. All processing (video and photo to GIF conversion) happens entirely on your device. No data is transmitted to external servers.</p>
+      </section>
+
+      <section>
+        <h2>3. Device Permissions</h2>
+        <p>The app may request access to the following device features:</p>
+        <ul style="margin-top:10px;">
+          <li><strong>Photo Library (Read)</strong>: to select photos and videos for GIF conversion</li>
+          <li><strong>Photo Library (Write)</strong>: to save generated GIFs to your library</li>
+        </ul>
+        <p style="margin-top:10px;">These permissions are used only when you actively select content and are never used for background data collection.</p>
+      </section>
+
+      <section>
+        <h2>4. In-App Purchase</h2>
+        <p>The app includes a paid feature (Pro, one-time purchase ¥100). All transactions are processed by Apple Inc. through the App Store. The app never accesses or stores your payment information.</p>
+      </section>
+
+      <section>
+        <h2>5. Third Parties</h2>
+        <p>The app does not sell, share, or disclose any user information to third parties.</p>
+      </section>
+
+      <section>
+        <h2>6. Analytics &amp; Tracking</h2>
+        <p>The app uses no advertising tracking or third-party analytics SDKs.</p>
+      </section>
+
+      <section>
+        <h2>7. Children's Privacy</h2>
+        <p>The app is not directed at children under the age of 13.</p>
+      </section>
+
+      <section>
+        <h2>8. Changes to This Policy</h2>
+        <p>This policy may be updated without prior notice. The latest version will always be available on this page.</p>
+      </section>
+
+      <section>
+        <h2>9. Contact</h2>
+        <p>For privacy-related questions, please reach out via:</p>
+        <p style="margin-top:8px;"><a class="link" href="https://x.com/AI_PdM_Nullpo" target="_blank" rel="noopener">@AI_PdM_Nullpo</a></p>
+      </section>
+    </div>
   </main>
 
   <footer>
-    &copy; 2025 GIF Maker &nbsp;|&nbsp; <a href="terms.html" style="color:inherit;text-decoration:underline;">利用規約</a>
+    <span class="ja">&copy; 2025 GIF Maker &nbsp;|&nbsp; <a href="terms.html" style="color:inherit;text-decoration:underline;">利用規約</a></span>
+    <span class="en">&copy; 2025 GIF Maker &nbsp;|&nbsp; <a href="terms.html?lang=en" style="color:inherit;text-decoration:underline;">Terms of Use</a></span>
   </footer>
+
+  <script>
+    function setLang(lang) {
+      const isEn = lang === 'en';
+      document.body.classList.toggle('en', isEn);
+      document.getElementById('html-root').lang = lang;
+      document.getElementById('btn-ja').classList.toggle('active', !isEn);
+      document.getElementById('btn-en').classList.toggle('active', isEn);
+      document.title = isEn ? 'Privacy Policy — GIF Maker' : 'プライバシーポリシー — GIF Maker';
+      const url = new URL(window.location);
+      isEn ? url.searchParams.set('lang', 'en') : url.searchParams.delete('lang');
+      history.replaceState({}, '', url);
+    }
+    if (new URLSearchParams(window.location.search).get('lang') === 'en') setLang('en');
+  </script>
 </body>
 </html>
