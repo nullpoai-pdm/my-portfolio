@@ -72,10 +72,8 @@
       text-align: center; font-size: 12px;
       color: var(--faint); padding: 24px;
     }
-    /* Language switching */
+    /* Language switching — JS handles show/hide */
     .en { display: none; }
-    body.en .en { display: revert; }
-    body.en .ja { display: none; }
   </style>
 </head>
 <body>
@@ -218,7 +216,8 @@
   <script>
     function setLang(lang) {
       const isEn = lang === 'en';
-      document.body.classList.toggle('en', isEn);
+      document.querySelectorAll('.ja').forEach(el => { el.style.display = isEn ? 'none' : ''; });
+      document.querySelectorAll('.en').forEach(el => { el.style.display = isEn ? (el.tagName === 'SPAN' ? 'inline' : 'block') : ''; });
       document.getElementById('html-root').lang = lang;
       document.getElementById('btn-ja').classList.toggle('active', !isEn);
       document.getElementById('btn-en').classList.toggle('active', isEn);
