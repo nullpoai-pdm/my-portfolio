@@ -13,7 +13,6 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --bg: #F5F5F3;
-      --card: #FFFFFF;
       --text: #111110;
       --muted: #6B6B68;
       --faint: #B2B1AE;
@@ -38,7 +37,6 @@
     nav a { font-size: 13px; color: var(--muted); text-decoration: none; }
     nav a:hover { color: var(--text); }
     nav span { color: var(--faint); font-size: 13px; }
-    nav .app { font-size: 13px; font-weight: 700; color: var(--text); }
     main {
       max-width: 680px; margin: 0 auto;
       padding: 48px 24px 80px;
@@ -71,7 +69,7 @@
   <nav>
     <a href="/my-portfolio/">Works</a>
     <span>/</span>
-    <span class="app">GIF Maker</span>
+    <span style="color:var(--text);font-size:13px;font-weight:700;">GIF Maker</span>
     <span>/</span>
     <span style="color:var(--text);font-size:13px;">利用規約</span>
   </nav>
@@ -83,12 +81,12 @@
 
     <section>
       <h2>1. 同意</h2>
-      <p>本アプリ「GIF Maker」（以下「本アプリ」）をダウンロード・インストール・使用することで、ユーザーは本利用規約に同意したものとみなします。同意いただけない場合は、本アプリの使用を中止してください。</p>
+      <p>本アプリ「GIF Maker」をダウンロード・インストール・使用することで、ユーザーは本利用規約に同意したものとみなします。同意いただけない場合は、本アプリの使用を中止してください。</p>
     </section>
 
     <section>
       <h2>2. ライセンス</h2>
-      <p>開発者（nullpoai）は、ユーザーに対して本アプリを個人的・非商業的目的で使用する、非独占的かつ譲渡不可のライセンスを付与します。以下の行為は禁止されます。</p>
+      <p>本アプリは、個人的・非商業的目的での使用に限り利用が許可されます。以下の行為は禁止されます。</p>
       <ul style="margin-top:10px;">
         <li>本アプリを改変・逆コンパイル・リバースエンジニアリングすること</li>
         <li>本アプリのコピーを第三者に配布・販売すること</li>
@@ -98,7 +96,7 @@
 
     <section>
       <h2>3. アプリ内課金（Pro版）</h2>
-      <p>本アプリでは買い切り型のPro機能（¥120）を提供しています。購入に関しては以下をご確認ください。</p>
+      <p>本アプリでは買い切り型のPro機能（¥120）を提供しています。</p>
       <ul style="margin-top:10px;">
         <li>課金処理はすべてApple Inc.のApp Storeが管理します</li>
         <li>購入後の返金はAppleの返金ポリシーに準じます</li>
@@ -109,11 +107,11 @@
 
     <section>
       <h2>4. ユーザーコンテンツ</h2>
-      <p>ユーザーが本アプリを通じて変換・保存するコンテンツ（動画・画像・GIF等）に関する権利はユーザー自身に帰属します。開発者はこれらのコンテンツに対していかなる権利も主張しません。ユーザーは、変換するコンテンツについて必要な権利・許諾を有していることを保証するものとします。</p>
+      <p>ユーザーが本アプリを通じて変換・保存するコンテンツ（動画・画像・GIF等）に関する権利はユーザー自身に帰属します。ユーザーは、変換するコンテンツについて必要な権利・許諾を有していることを保証するものとします。</p>
     </section>
 
     <section>
-      <h2>5. 禁止行為</h2>
+      <h2>5. 禁止事項</h2>
       <p>以下の目的での本アプリの使用を禁止します。</p>
       <ul style="margin-top:10px;">
         <li>他者の著作権・肖像権・プライバシー権を侵害するコンテンツの作成</li>
@@ -124,12 +122,12 @@
 
     <section>
       <h2>6. 免責事項</h2>
-      <p>本アプリは「現状有姿」で提供されます。開発者は本アプリの動作・品質・特定目的への適合性について、明示・黙示を問わず一切の保証を行いません。本アプリの使用によって生じた損害について、開発者は責任を負いません。</p>
+      <p>本アプリは「現状有姿」で提供されます。本アプリの動作・品質・特定目的への適合性について、明示・黙示を問わず一切の保証を行いません。本アプリの使用によって生じた損害について、運営者は責任を負いません。</p>
     </section>
 
     <section>
       <h2>7. サービスの変更・終了</h2>
-      <p>開発者は予告なく本アプリの機能変更・更新・配信停止を行う権利を留保します。</p>
+      <p>本アプリの機能変更・更新・配信停止は予告なく行われる場合があります。</p>
     </section>
 
     <section>
@@ -140,12 +138,12 @@
     <section>
       <h2>9. お問い合わせ</h2>
       <p>本規約に関するご質問は、下記よりお問い合わせください。</p>
-      <p style="margin-top:8px;"><a class="link" href="https://x.com/AI_PdM_Nullpo" target="_blank" rel="noopener">https://x.com/AI_PdM_Nullpo</a></p>
+      <p style="margin-top:8px;"><a class="link" href="https://x.com/AI_PdM_Nullpo" target="_blank" rel="noopener">@AI_PdM_Nullpo</a></p>
     </section>
   </main>
 
   <footer>
-    &copy; 2025 nullpoai — <a href="privacy.html" style="color:inherit;text-decoration:underline;">プライバシーポリシー</a>
+    &copy; 2025 GIF Maker &nbsp;|&nbsp; <a href="privacy.html" style="color:inherit;text-decoration:underline;">プライバシーポリシー</a>
   </footer>
 </body>
 </html>
