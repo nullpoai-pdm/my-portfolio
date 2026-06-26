@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja" id="html-root">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー — Exif削除</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/my-portfolio/favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #F5F5F3;
+      --text: #111110;
+      --muted: #6B6B68;
+      --faint: #B2B1AE;
+      --border: rgba(0,0,0,0.08);
+    }
+    body {
+      font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      height: 52px; padding: 0 24px;
+      display: flex; align-items: center; gap: 12px;
+      backdrop-filter: blur(20px) saturate(160%);
+      -webkit-backdrop-filter: blur(20px) saturate(160%);
+      background: rgba(245,245,243,0.88);
+      border-bottom: 1px solid var(--border);
+    }
+    nav a { font-size: 13px; color: var(--muted); text-decoration: none; }
+    nav a:hover { color: var(--text); }
+    nav span { color: var(--faint); font-size: 13px; }
+    .lang-toggle { margin-left: auto; display: flex; gap: 4px; }
+    .lang-btn {
+      font-size: 11px; font-weight: 700; padding: 3px 9px;
+      border: 1px solid var(--border); border-radius: 4px;
+      background: transparent; cursor: pointer; color: var(--muted);
+      letter-spacing: 0.06em; font-family: inherit;
+    }
+    .lang-btn.active { background: var(--text); color: #fff; border-color: var(--text); }
+    .lang-btn:hover:not(.active) { border-color: var(--muted); }
+    main {
+      max-width: 680px; margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .badge {
+      display: inline-block; font-size: 11px; font-weight: 700;
+      background: #111110; color: #fff;
+      padding: 3px 10px; border-radius: 100px; letter-spacing: 0.08em;
+      text-transform: uppercase; margin-bottom: 16px;
+    }
+    h1 { font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+    .meta { font-size: 13px; color: var(--muted); margin-bottom: 40px; }
+    section { margin-bottom: 36px; }
+    h2 {
+      font-size: 15px; font-weight: 700;
+      margin-bottom: 12px; padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    p, li { font-size: 14px; color: #333; line-height: 1.8; }
+    ul { padding-left: 1.4em; }
+    li { margin-bottom: 4px; }
+    a.link { color: #0066cc; text-decoration: underline; }
+    footer {
+      text-align: center; font-size: 12px;
+      color: var(--faint); padding: 24px;
+    }
+    .en { display: none; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/my-portfolio/">Works</a>
+    <span>/</span>
+    <span style="color:var(--text);font-size:13px;font-weight:700;" class="ja">Exif削除</span>
+    <span style="color:var(--text);font-size:13px;font-weight:700;" class="en">Exif Remover</span>
+    <span>/</span>
+    <span style="color:var(--text);font-size:13px;" class="ja">プライバシーポリシー</span>
+    <span style="color:var(--text);font-size:13px;" class="en">Privacy Policy</span>
+    <div class="lang-toggle">
+      <button id="btn-ja" class="lang-btn active" onclick="setLang('ja')">JA</button>
+      <button id="btn-en" class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="badge ja">Exif削除</div>
+    <div class="badge en" style="display:none;">Exif Remover</div>
+
+    <!-- Japanese -->
+    <div class="ja">
+      <h1>プライバシーポリシー</h1>
+      <p class="meta">最終更新日：2026年6月27日</p>
+
+      <section>
+        <h2>1. はじめに</h2>
+        <p>本アプリ「Exif削除」は、ユーザーのプライバシーを尊重し、個人情報の保護に努めています。本ポリシーでは、本アプリにおける情報の取り扱いについて説明します。</p>
+      </section>
+
+      <section>
+        <h2>2. 収集する情報</h2>
+        <p>本アプリは、ユーザーの個人情報を一切収集しません。すべての処理（写真に含まれるGPS位置情報の削除）は端末内でのみ行われ、外部サーバーへのデータ送信は行いません。</p>
+      </section>
+
+      <section>
+        <h2>3. 位置情報の取り扱い</h2>
+        <p>本アプリは写真のExif情報に含まれるGPS座標を読み取り、端末内の地図（MapKit）に表示します。この位置情報は確認画面でのプレビュー表示のみに使用され、外部サービスへの送信・保存・収集は一切行いません。アプリ終了後も位置情報データは端末外に出ることはありません。</p>
+      </section>
+
+      <section>
+        <h2>4. アクセスする端末機能</h2>
+        <p>本アプリは以下の端末機能へのアクセスを要求する場合があります。</p>
+        <ul style="margin-top:10px;">
+          <li><strong>フォトライブラリ（読み取り）</strong>：GPS位置情報を削除する写真を選択するため</li>
+          <li><strong>フォトライブラリ（書き込み）</strong>：位置情報を削除した写真をカメラロールに保存するため</li>
+        </ul>
+        <p style="margin-top:10px;">これらの権限はユーザーが明示的に操作した場合にのみ使用され、バックグラウンドでの収集は行いません。</p>
+      </section>
+
+      <section>
+        <h2>5. アプリ内課金</h2>
+        <p>本アプリには有料機能（Exif削除 Pro、買い切り¥200）が含まれます。課金処理はすべてApple Inc.のApp Storeを通じて行われます。クレジットカード情報その他の決済情報は本アプリが取得・保存することはありません。</p>
+      </section>
+
+      <section>
+        <h2>6. 第三者への情報提供</h2>
+        <p>本アプリはユーザーの情報を第三者に販売・提供・開示することはありません。</p>
+      </section>
+
+      <section>
+        <h2>7. アナリティクス・トラッキング</h2>
+        <p>本アプリは、広告トラッキングおよびサードパーティ製アナリティクスSDKを一切使用していません。</p>
+      </section>
+
+      <section>
+        <h2>8. お子様のプライバシー</h2>
+        <p>本アプリは13歳未満のお子様を対象としていません。</p>
+      </section>
+
+      <section>
+        <h2>9. 本ポリシーの変更</h2>
+        <p>本ポリシーは予告なく変更される場合があります。最新版は本ページに掲載されます。</p>
+      </section>
+
+      <section>
+        <h2>10. お問い合わせ</h2>
+        <p>プライバシーに関するご質問は、下記よりお問い合わせください。</p>
+        <p style="margin-top:8px;"><a class="link" href="https://x.com/AI_PdM_Nullpo" target="_blank" rel="noopener">@AI_PdM_Nullpo</a></p>
+      </section>
+    </div>
+
+    <!-- English -->
+    <div class="en">
+      <h1>Privacy Policy</h1>
+      <p class="meta">Last updated: June 27, 2026</p>
+
+      <section>
+        <h2>1. Introduction</h2>
+        <p>Exif Remover respects your privacy and is committed to protecting your personal information. This policy explains how information is handled within the app.</p>
+      </section>
+
+      <section>
+        <h2>2. Information We Collect</h2>
+        <p>The app collects no personal information. All processing (removing GPS location data from photos) happens entirely on your device. No data is transmitted to external servers.</p>
+      </section>
+
+      <section>
+        <h2>3. Location Data Handling</h2>
+        <p>The app reads GPS coordinates embedded in your photo's Exif data and displays them on an on-device map (MapKit) for preview purposes only. This location information is never sent to, stored on, or collected by any external service. Location data never leaves your device.</p>
+      </section>
+
+      <section>
+        <h2>4. Device Permissions</h2>
+        <p>The app may request access to the following device features:</p>
+        <ul style="margin-top:10px;">
+          <li><strong>Photo Library (Read)</strong>: to let you select photos whose GPS data you want to remove</li>
+          <li><strong>Photo Library (Write)</strong>: to save the GPS-removed photo to your Camera Roll</li>
+        </ul>
+        <p style="margin-top:10px;">These permissions are used only when you explicitly perform the corresponding action. No background collection occurs.</p>
+      </section>
+
+      <section>
+        <h2>5. In-App Purchase</h2>
+        <p>The app includes a paid feature (Exif Remover Pro, one-time purchase ¥200 / $0.99). All transactions are processed by Apple Inc. through the App Store. The app never accesses or stores your payment information.</p>
+      </section>
+
+      <section>
+        <h2>6. Third Parties</h2>
+        <p>The app does not sell, share, or disclose any user information to third parties.</p>
+      </section>
+
+      <section>
+        <h2>7. Analytics &amp; Tracking</h2>
+        <p>The app uses no advertising tracking or third-party analytics SDKs.</p>
+      </section>
+
+      <section>
+        <h2>8. Children's Privacy</h2>
+        <p>The app is not directed at children under the age of 13.</p>
+      </section>
+
+      <section>
+        <h2>9. Changes to This Policy</h2>
+        <p>This policy may be updated without prior notice. The latest version will always be available on this page.</p>
+      </section>
+
+      <section>
+        <h2>10. Contact</h2>
+        <p>For privacy-related questions, please reach out via:</p>
+        <p style="margin-top:8px;"><a class="link" href="https://x.com/AI_PdM_Nullpo" target="_blank" rel="noopener">@AI_PdM_Nullpo</a></p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <span class="ja">&copy; 2026 Exif削除 &nbsp;|&nbsp; <a href="terms.html" style="color:inherit;text-decoration:underline;">利用規約</a></span>
+    <span class="en">&copy; 2026 Exif Remover &nbsp;|&nbsp; <a href="terms.html?lang=en" style="color:inherit;text-decoration:underline;">Terms of Use</a></span>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      const isEn = lang === 'en';
+      document.querySelectorAll('.ja').forEach(el => { el.style.display = isEn ? 'none' : ''; });
+      document.querySelectorAll('.en').forEach(el => { el.style.display = isEn ? (el.tagName === 'SPAN' || el.tagName === 'DIV' && el.classList.contains('badge') ? 'inline-block' : 'block') : ''; });
+      document.getElementById('html-root').lang = lang;
+      document.getElementById('btn-ja').classList.toggle('active', !isEn);
+      document.getElementById('btn-en').classList.toggle('active', isEn);
+      document.title = isEn ? 'Privacy Policy — Exif Remover' : 'プライバシーポリシー — Exif削除';
+      const url = new URL(window.location);
+      isEn ? url.searchParams.set('lang', 'en') : url.searchParams.delete('lang');
+      history.replaceState({}, '', url);
+    }
+    if (new URLSearchParams(window.location.search).get('lang') === 'en') setLang('en');
+  </script>
+</body>
+</html>
