@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja" id="html-root">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>利用規約 — 動画速度変換</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/my-portfolio/favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #F5F5F3;
+      --text: #111110;
+      --muted: #6B6B68;
+      --faint: #B2B1AE;
+      --border: rgba(0,0,0,0.08);
+    }
+    body {
+      font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      height: 52px; padding: 0 24px;
+      display: flex; align-items: center; gap: 12px;
+      backdrop-filter: blur(20px) saturate(160%);
+      -webkit-backdrop-filter: blur(20px) saturate(160%);
+      background: rgba(245,245,243,0.88);
+      border-bottom: 1px solid var(--border);
+    }
+    nav a { font-size: 13px; color: var(--muted); text-decoration: none; }
+    nav a:hover { color: var(--text); }
+    nav span { color: var(--faint); font-size: 13px; }
+    .lang-toggle { margin-left: auto; display: flex; gap: 4px; }
+    .lang-btn {
+      font-size: 11px; font-weight: 700; padding: 3px 9px;
+      border: 1px solid var(--border); border-radius: 4px;
+      background: transparent; cursor: pointer; color: var(--muted);
+      letter-spacing: 0.06em; font-family: inherit;
+    }
+    .lang-btn.active { background: var(--text); color: #fff; border-color: var(--text); }
+    .lang-btn:hover:not(.active) { border-color: var(--muted); }
+    main {
+      max-width: 680px; margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .badge {
+      display: inline-block; font-size: 11px; font-weight: 700;
+      background: #111110; color: #fff;
+      padding: 3px 10px; border-radius: 100px; letter-spacing: 0.08em;
+      text-transform: uppercase; margin-bottom: 16px;
+    }
+    h1 { font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+    .meta { font-size: 13px; color: var(--muted); margin-bottom: 40px; }
+    section { margin-bottom: 36px; }
+    h2 {
+      font-size: 15px; font-weight: 700;
+      margin-bottom: 12px; padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    p, li { font-size: 14px; color: #333; line-height: 1.8; }
+    ul { padding-left: 1.4em; }
+    li { margin-bottom: 4px; }
+    a.link { color: #0066cc; text-decoration: underline; }
+    footer {
+      text-align: center; font-size: 12px;
+      color: var(--faint); padding: 24px;
+    }
+    .en { display: none; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/my-portfolio/">Works</a>
+    <span>/</span>
+    <span style="color:var(--text);font-size:13px;font-weight:700;" class="ja">動画速度変換</span>
+    <span style="color:var(--text);font-size:13px;font-weight:700;" class="en">Video Speed</span>
+    <span>/</span>
+    <span style="color:var(--text);font-size:13px;" class="ja">利用規約</span>
+    <span style="color:var(--text);font-size:13px;" class="en">Terms of Use</span>
+    <div class="lang-toggle">
+      <button id="btn-ja" class="lang-btn active" onclick="setLang('ja')">JA</button>
+      <button id="btn-en" class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="badge ja">動画速度変換</div>
+    <div class="badge en" style="display:none;">Video Speed</div>
+
+    <!-- Japanese -->
+    <div class="ja">
+      <h1>利用規約</h1>
+      <p class="meta">最終更新日：2026年6月27日</p>
+
+      <section>
+        <h2>1. 同意</h2>
+        <p>本アプリ「動画速度変換」をダウンロード・インストール・使用することで、ユーザーは本利用規約に同意したものとみなします。同意いただけない場合は、本アプリの使用を中止してください。</p>
+      </section>
+
+      <section>
+        <h2>2. ライセンス</h2>
+        <p>本アプリは、個人的・非商業的目的での使用に限り利用が許可されます。以下の行為は禁止されます。</p>
+        <ul style="margin-top:10px;">
+          <li>本アプリを改変・逆コンパイル・リバースエンジニアリングすること</li>
+          <li>本アプリのコピーを第三者に配布・販売すること</li>
+          <li>本アプリを商業目的で再利用すること</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. アプリ内課金</h2>
+        <p>本アプリでは買い切り型のPro機能（動画速度変換 Pro、¥200）を提供しています。</p>
+        <ul style="margin-top:10px;">
+          <li>課金処理はすべてApple Inc.のApp Storeが管理します</li>
+          <li>購入後の返金はAppleの返金ポリシーに準じます</li>
+          <li>同一Apple IDでサインインすれば、購入の復元（リストア）が可能です</li>
+          <li>買い切りのため、継続課金は発生しません</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. ユーザーコンテンツ</h2>
+        <p>ユーザーが本アプリを通じて処理・保存するコンテンツ（写真・位置情報を削除した画像ファイル等）に関する権利はユーザー自身に帰属します。ユーザーは、処理するコンテンツについて必要な権利・許諾を有していることを保証するものとします。</p>
+      </section>
+
+      <section>
+        <h2>5. 禁止事項</h2>
+        <p>以下の目的での本アプリの使用を禁止します。</p>
+        <ul style="margin-top:10px;">
+          <li>他者の著作権・肖像権・プライバシー権を侵害するコンテンツの加工・作成</li>
+          <li>違法・有害・差別的なコンテンツの加工・作成</li>
+          <li>本アプリのサービスを妨害する行為</li>
+          <li>位置情報を改ざん・偽装する目的での使用</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>6. 免責事項</h2>
+        <p>本アプリは「現状有姿」で提供されます。本アプリの動作・品質・特定目的への適合性について、明示・黙示を問わず一切の保証を行いません。本アプリの使用によって生じた損害について、運営者は責任を負いません。</p>
+      </section>
+
+      <section>
+        <h2>7. サービスの変更・終了</h2>
+        <p>本アプリの機能変更・更新・配信停止は予告なく行われる場合があります。</p>
+      </section>
+
+      <section>
+        <h2>8. 準拠法</h2>
+        <p>本規約は日本法に準拠し、解釈されます。</p>
+      </section>
+
+      <section>
+        <h2>9. お問い合わせ</h2>
+        <p>本規約に関するご質問は、下記よりお問い合わせください。</p>
+        <p style="margin-top:8px;"><a class="link" href="https://x.com/AI_PdM_Nullpo" target="_blank" rel="noopener">@AI_PdM_Nullpo</a></p>
+      </section>
+    </div>
+
+    <!-- English -->
+    <div class="en">
+      <h1>Terms of Use</h1>
+      <p class="meta">Last updated: June 27, 2026</p>
+
+      <section>
+        <h2>1. Agreement</h2>
+        <p>By downloading, installing, or using Video Speed, you agree to these Terms of Use. If you do not agree, please stop using the app.</p>
+      </section>
+
+      <section>
+        <h2>2. License</h2>
+        <p>The app is licensed for personal, non-commercial use only. The following are prohibited:</p>
+        <ul style="margin-top:10px;">
+          <li>Modifying, decompiling, or reverse-engineering the app</li>
+          <li>Distributing or selling copies of the app to third parties</li>
+          <li>Reusing the app for any commercial purpose</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. In-App Purchase</h2>
+        <p>The app offers a one-time Pro unlock (Video Speed Pro, ¥200 / $0.99).</p>
+        <ul style="margin-top:10px;">
+          <li>All purchases are managed by Apple Inc. through the App Store</li>
+          <li>Refunds are subject to Apple's refund policy</li>
+          <li>Purchases can be restored on any device signed in with the same Apple ID</li>
+          <li>This is a one-time purchase — no recurring charges</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. User Content</h2>
+        <p>All rights to content you process or save using the app (photos, GPS-removed image files, etc.) remain with you. You represent that you hold the necessary rights or permissions for any content you process with the app.</p>
+      </section>
+
+      <section>
+        <h2>5. Prohibited Uses</h2>
+        <p>Use of the app for the following purposes is prohibited:</p>
+        <ul style="margin-top:10px;">
+          <li>Processing or creating content that infringes copyright, portrait rights, or privacy rights of others</li>
+          <li>Processing or creating illegal, harmful, or discriminatory content</li>
+          <li>Disrupting or interfering with the app's services</li>
+          <li>Using the app to falsify or spoof location data</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>6. Disclaimer</h2>
+        <p>The app is provided "as is." No warranties, express or implied, are made regarding its functionality, quality, or fitness for a particular purpose. The developer is not liable for any damages arising from use of the app.</p>
+      </section>
+
+      <section>
+        <h2>7. Changes &amp; Discontinuation</h2>
+        <p>Features may be changed, updated, or discontinued without prior notice.</p>
+      </section>
+
+      <section>
+        <h2>8. Governing Law</h2>
+        <p>These Terms are governed by and construed in accordance with the laws of Japan.</p>
+      </section>
+
+      <section>
+        <h2>9. Contact</h2>
+        <p>For questions regarding these Terms, please reach out via:</p>
+        <p style="margin-top:8px;"><a class="link" href="https://x.com/AI_PdM_Nullpo" target="_blank" rel="noopener">@AI_PdM_Nullpo</a></p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <span class="ja">&copy; 2026 動画速度変換 &nbsp;|&nbsp; <a href="privacy.html" style="color:inherit;text-decoration:underline;">プライバシーポリシー</a></span>
+    <span class="en">&copy; 2026 Video Speed &nbsp;|&nbsp; <a href="privacy.html?lang=en" style="color:inherit;text-decoration:underline;">Privacy Policy</a></span>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      const isEn = lang === 'en';
+      document.querySelectorAll('.ja').forEach(el => { el.style.display = isEn ? 'none' : ''; });
+      document.querySelectorAll('.en').forEach(el => { el.style.display = isEn ? (el.tagName === 'SPAN' || el.tagName === 'DIV' && el.classList.contains('badge') ? 'inline-block' : 'block') : ''; });
+      document.getElementById('html-root').lang = lang;
+      document.getElementById('btn-ja').classList.toggle('active', !isEn);
+      document.getElementById('btn-en').classList.toggle('active', isEn);
+      document.title = isEn ? 'Terms of Use — Video Speed' : '利用規約 — 動画速度変換';
+      const url = new URL(window.location);
+      isEn ? url.searchParams.set('lang', 'en') : url.searchParams.delete('lang');
+      history.replaceState({}, '', url);
+    }
+    if (new URLSearchParams(window.location.search).get('lang') === 'en') setLang('en');
+  </script>
+</body>
+</html>
