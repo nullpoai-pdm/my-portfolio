@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja" id="html-root">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>利用規約 — CatSleeper（猫の集中タイマー）</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/my-portfolio/favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #F5F5F3;
+      --text: #111110;
+      --muted: #6B6B68;
+      --faint: #B2B1AE;
+      --border: rgba(0,0,0,0.08);
+    }
+    body {
+      font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      height: 52px; padding: 0 24px;
+      display: flex; align-items: center; gap: 12px;
+      backdrop-filter: blur(20px) saturate(160%);
+      -webkit-backdrop-filter: blur(20px) saturate(160%);
+      background: rgba(245,245,243,0.88);
+      border-bottom: 1px solid var(--border);
+    }
+    nav a { font-size: 13px; color: var(--muted); text-decoration: none; }
+    nav a:hover { color: var(--text); }
+    nav span { color: var(--faint); font-size: 13px; }
+    .lang-toggle { margin-left: auto; display: flex; gap: 4px; }
+    .lang-btn {
+      font-size: 11px; font-weight: 700; padding: 3px 9px;
+      border: 1px solid var(--border); border-radius: 4px;
+      background: transparent; cursor: pointer; color: var(--muted);
+      letter-spacing: 0.06em; font-family: inherit;
+    }
+    .lang-btn.active { background: var(--text); color: #fff; border-color: var(--text); }
+    .lang-btn:hover:not(.active) { border-color: var(--muted); }
+    main {
+      max-width: 680px; margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .badge {
+      display: inline-block; font-size: 11px; font-weight: 700;
+      background: #111110; color: #fff;
+      padding: 3px 10px; border-radius: 100px; letter-spacing: 0.08em;
+      text-transform: uppercase; margin-bottom: 16px;
+    }
+    h1 { font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+    .meta { font-size: 13px; color: var(--muted); margin-bottom: 40px; }
+    section { margin-bottom: 36px; }
+    h2 {
+      font-size: 15px; font-weight: 700;
+      margin-bottom: 12px; padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    p, li { font-size: 14px; color: #333; line-height: 1.8; }
+    ul { padding-left: 1.4em; }
+    li { margin-bottom: 4px; }
+    a.link { color: #0066cc; text-decoration: underline; }
+    footer {
+      text-align: center; font-size: 12px;
+      color: var(--faint); padding: 24px;
+    }
+    .en { display: none; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/my-portfolio/">Works</a>
+    <span>/</span>
+    <span style="color:var(--text);font-size:13px;font-weight:700;" class="ja">CatSleeper（猫の集中タイマー）</span>
+    <span style="color:var(--text);font-size:13px;font-weight:700;" class="en">CatSleeper</span>
+    <span>/</span>
+    <span style="color:var(--text);font-size:13px;" class="ja">利用規約</span>
+    <span style="color:var(--text);font-size:13px;" class="en">Terms of Use</span>
+    <div class="lang-toggle">
+      <button id="btn-ja" class="lang-btn active" onclick="setLang('ja')">JA</button>
+      <button id="btn-en" class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="badge ja">CatSleeper（猫の集中タイマー）</div>
+    <div class="badge en" style="display:none;">CatSleeper</div>
+
+    <!-- Japanese -->
+    <div class="ja">
+      <h1>利用規約</h1>
+      <p class="meta">最終更新日：2026年7月25日</p>
+
+      <section>
+        <h2>1. 同意</h2>
+        <p>本アプリ「CatSleeper（猫の集中タイマー）」をダウンロード・インストール・使用することで、ユーザーは本利用規約に同意したものとみなします。同意いただけない場合は、本アプリの使用を中止してください。</p>
+      </section>
+
+      <section>
+        <h2>2. ライセンス</h2>
+        <p>本アプリは、個人的・非商業的目的での使用に限り利用が許可されます。以下の行為は禁止されます。</p>
+        <ul style="margin-top:10px;">
+          <li>本アプリを改変・逆コンパイル・リバースエンジニアリングすること</li>
+          <li>本アプリのコピーを第三者に配布・販売すること</li>
+          <li>本アプリに収録された画像・イラストを抽出し、複製・再配布・再販売すること</li>
+          <li>本アプリを商業目的で再利用すること</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. アプリ内課金と購入したコンテンツ</h2>
+        <p>本アプリは無料でダウンロードでき、オンボーディングで選んだ1つの夢の世界を無料で永久にご利用いただけます。その他の夢の世界は、買い切り型のアプリ内課金（単体またはセット）で追加できます。</p>
+        <ul style="margin-top:10px;">
+          <li>課金処理はすべてApple Inc.のApp Storeが管理します</li>
+          <li>購入後の返金はAppleの返金ポリシーに準じます</li>
+          <li>同一Apple Accountでサインインすれば、購入の復元（リストア）が可能です</li>
+          <li>買い切りのため、継続課金は発生しません</li>
+          <li>購入した夢の世界は、本アプリが提供される限り、追加の支払いなくご利用いただけます</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. 集中タイマーの性質</h2>
+        <p>本アプリは、集中と休憩のリズムを支えることを目的としたタイマーです。以下の点にご留意ください。</p>
+        <ul style="margin-top:10px;">
+          <li>本アプリは医療機器ではなく、集中力・学習成果・睡眠・依存の改善について、いかなる効果も保証するものではありません</li>
+          <li>本アプリは、他のアプリの利用を検知・監視・制限する機能を持ちません</li>
+          <li>本アプリが記録するのは、集中セッションの開始と終了、およびアプリがバックグラウンドにあった時間であり、端末全体の利用状況ではありません</li>
+          <li>アプリ内課金によって、集中の効果やセッションの成否が変わることはありません</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>5. 禁止事項</h2>
+        <p>以下の目的での本アプリの使用を禁止します。</p>
+        <ul style="margin-top:10px;">
+          <li>本アプリの動作を妨害する行為</li>
+          <li>課金処理を回避・改変しようとする行為</li>
+          <li>本アプリのコンテンツを権利者の許諾なく利用する行為</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>6. 免責事項</h2>
+        <p>本アプリは「現状有姿」で提供されます。本アプリの動作・品質・特定目的への適合性について、明示・黙示を問わず一切の保証を行いません。通知の遅延・不達、OSの仕様変更、端末の設定によりタイマーや通知が意図どおりに動作しない場合があります。本アプリの使用によって生じた損害について、運営者は責任を負いません。</p>
+      </section>
+
+      <section>
+        <h2>7. サービスの変更・終了</h2>
+        <p>本アプリの機能変更・更新・配信停止は予告なく行われる場合があります。配信を終了する場合も、すでに購入済みのコンテンツについて追加の支払いを求めることはありません。</p>
+      </section>
+
+      <section>
+        <h2>8. 準拠法</h2>
+        <p>本規約は日本法に準拠し、解釈されます。</p>
+      </section>
+
+      <section>
+        <h2>9. お問い合わせ</h2>
+        <p>本規約に関するご質問は、下記よりお問い合わせください。</p>
+        <p style="margin-top:8px;"><a class="link" href="https://x.com/AI_PdM_Nullpo" target="_blank" rel="noopener">@AI_PdM_Nullpo</a></p>
+      </section>
+    </div>
+
+    <!-- English -->
+    <div class="en">
+      <h1>Terms of Use</h1>
+      <p class="meta">Last updated: July 25, 2026</p>
+
+      <section>
+        <h2>1. Agreement</h2>
+        <p>By downloading, installing, or using CatSleeper, you agree to these Terms of Use. If you do not agree, please stop using the app.</p>
+      </section>
+
+      <section>
+        <h2>2. License</h2>
+        <p>The app is licensed for personal, non-commercial use only. The following are prohibited:</p>
+        <ul style="margin-top:10px;">
+          <li>Modifying, decompiling, or reverse-engineering the app</li>
+          <li>Distributing or selling copies of the app to third parties</li>
+          <li>Extracting the artwork included in the app in order to copy, redistribute, or resell it</li>
+          <li>Reusing the app for any commercial purpose</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. In-App Purchases and Purchased Content</h2>
+        <p>The app is free to download, and the one dream world you choose during onboarding is yours permanently at no cost. Additional dream worlds can be added through one-time in-app purchases, individually or as a set.</p>
+        <ul style="margin-top:10px;">
+          <li>All purchases are managed by Apple Inc. through the App Store</li>
+          <li>Refunds are subject to Apple's refund policy</li>
+          <li>Purchases can be restored on any device signed in with the same Apple Account</li>
+          <li>These are one-time purchases — no recurring charges</li>
+          <li>Dream worlds you purchase remain available to you, without further payment, for as long as the app is offered</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. Nature of the Focus Timer</h2>
+        <p>The app is a timer intended to support a rhythm of focus and rest. Please note the following:</p>
+        <ul style="margin-top:10px;">
+          <li>The app is not a medical device and makes no guarantee of any effect on concentration, study outcomes, sleep, or dependency</li>
+          <li>The app has no capability to detect, monitor, or restrict your use of other apps</li>
+          <li>What the app records is the start and end of focus sessions and the time the app spent in the background — not your overall device usage</li>
+          <li>In-app purchases never change the effectiveness of a focus session or whether it succeeds</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>5. Prohibited Uses</h2>
+        <p>Use of the app for the following purposes is prohibited:</p>
+        <ul style="margin-top:10px;">
+          <li>Disrupting or interfering with the app's operation</li>
+          <li>Attempting to circumvent or tamper with purchase processing</li>
+          <li>Using the app's content without permission from the rights holder</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>6. Disclaimer</h2>
+        <p>The app is provided "as is." No warranties, express or implied, are made regarding its functionality, quality, or fitness for a particular purpose. Notifications may be delayed or undelivered, and timers or notifications may not behave as intended due to OS changes or device settings. The developer is not liable for any damages arising from use of the app.</p>
+      </section>
+
+      <section>
+        <h2>7. Changes &amp; Discontinuation</h2>
+        <p>Features may be changed, updated, or discontinued without prior notice. If distribution ends, no additional payment will be requested for content you have already purchased.</p>
+      </section>
+
+      <section>
+        <h2>8. Governing Law</h2>
+        <p>These Terms are governed by and construed in accordance with the laws of Japan.</p>
+      </section>
+
+      <section>
+        <h2>9. Contact</h2>
+        <p>For questions regarding these Terms, please reach out via:</p>
+        <p style="margin-top:8px;"><a class="link" href="https://x.com/AI_PdM_Nullpo" target="_blank" rel="noopener">@AI_PdM_Nullpo</a></p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <span class="ja">&copy; 2026 CatSleeper（猫の集中タイマー） &nbsp;|&nbsp; <a href="privacy.html" style="color:inherit;text-decoration:underline;">プライバシーポリシー</a></span>
+    <span class="en">&copy; 2026 CatSleeper &nbsp;|&nbsp; <a href="privacy.html?lang=en" style="color:inherit;text-decoration:underline;">Privacy Policy</a></span>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      const isEn = lang === 'en';
+      document.querySelectorAll('.ja').forEach(el => { el.style.display = isEn ? 'none' : ''; });
+      document.querySelectorAll('.en').forEach(el => { el.style.display = isEn ? (el.tagName === 'SPAN' || el.tagName === 'DIV' && el.classList.contains('badge') ? 'inline-block' : 'block') : ''; });
+      document.getElementById('html-root').lang = lang;
+      document.getElementById('btn-ja').classList.toggle('active', !isEn);
+      document.getElementById('btn-en').classList.toggle('active', isEn);
+      document.title = isEn ? 'Terms of Use — CatSleeper' : '利用規約 — CatSleeper（猫の集中タイマー）';
+      const url = new URL(window.location);
+      isEn ? url.searchParams.set('lang', 'en') : url.searchParams.delete('lang');
+      history.replaceState({}, '', url);
+    }
+    if (new URLSearchParams(window.location.search).get('lang') === 'en') setLang('en');
+  </script>
+</body>
+</html>
