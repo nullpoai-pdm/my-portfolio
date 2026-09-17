@@ -30,6 +30,7 @@ legal/
 | アプリ | プライバシーポリシー | 利用規約 |
 |---|---|---|
 | GIF Maker | `.../legal/gifmaker/privacy.html` | `.../legal/gifmaker/terms.html` |
+| Blur Video / 動画モザイク | `.../legal/mosaicvideo/privacy.html` | `.../legal/mosaicvideo/terms.html` |
 
 ### 運用ルール
 
