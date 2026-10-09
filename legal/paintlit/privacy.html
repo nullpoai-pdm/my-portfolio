@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja" id="html-root">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー — Paintlit</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/my-portfolio/favicon.ico" sizes="any">
+  <style>
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    :root { --bg:#F5F5F3; --text:#111110; --muted:#6B6B68; --faint:#B2B1AE; --border:rgba(0,0,0,.08); }
+    body { font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Noto Sans JP",sans-serif; background:var(--bg); color:var(--text); line-height:1.75; -webkit-font-smoothing:antialiased; }
+    nav { position:sticky; top:0; z-index:100; min-height:52px; padding:8px 24px; display:flex; align-items:center; gap:12px; backdrop-filter:blur(20px) saturate(160%); -webkit-backdrop-filter:blur(20px) saturate(160%); background:rgba(245,245,243,.88); border-bottom:1px solid var(--border); }
+    nav a { font-size:13px; color:var(--muted); text-decoration:none; }
+    nav span { color:var(--faint); font-size:13px; }
+    .crumb { color:var(--text); font-weight:700; }
+    .lang-toggle { margin-left:auto; display:flex; gap:4px; flex-shrink:0; }
+    .lang-btn { font-size:11px; font-weight:700; padding:3px 9px; border:1px solid var(--border); border-radius:4px; background:transparent; cursor:pointer; color:var(--muted); letter-spacing:.06em; font-family:inherit; }
+    .lang-btn.active { background:var(--text); color:#fff; border-color:var(--text); }
+    main { max-width:680px; margin:0 auto; padding:48px 24px 80px; }
+    .badge { display:inline-block; font-size:11px; font-weight:700; background:var(--text); color:#fff; padding:3px 10px; border-radius:100px; letter-spacing:.08em; text-transform:uppercase; margin-bottom:16px; }
+    h1 { font-size:26px; font-weight:700; margin-bottom:8px; }
+    .meta { font-size:13px; color:var(--muted); margin-bottom:40px; }
+    section { margin-bottom:36px; }
+    h2 { font-size:15px; font-weight:700; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+    p, li { font-size:14px; color:#333; line-height:1.8; }
+    ul { padding-left:1.4em; margin-top:10px; }
+    li { margin-bottom:4px; }
+    a.link { color:#06c; text-decoration:underline; }
+    footer { text-align:center; font-size:12px; color:var(--faint); padding:24px; }
+    [hidden] { display:none !important; }
+    @media (max-width:560px) { nav .page-label { display:none; } main { padding-top:36px; } }
+    </style>
+</head>
+<body>
+  <nav aria-label="Navigation">
+    <a href="/my-portfolio/">Works</a><span>/</span>
+    <span class="crumb">Paintlit</span><span class="page-label">/</span>
+    <span class="page-label ja">プライバシーポリシー</span><span class="page-label en" lang="en" hidden>Privacy Policy</span>
+    <div class="lang-toggle" aria-label="Language">
+      <button id="btn-ja" class="lang-btn active" type="button" aria-pressed="true" onclick="setLang('ja')">JA</button>
+      <button id="btn-en" class="lang-btn" type="button" aria-pressed="false" onclick="setLang('en')">EN</button>
+    </div>
+  </nav>
+  <main>
+    <div class="badge">Paintlit</div>
+    <div class="ja" lang="ja">
+      <h1>プライバシーポリシー</h1>
+      <p class="meta">最終更新日：2026年10月10日</p>
+      <section>
+        <h2>1. このポリシーについて</h2>
+        <p>Paintlit（以下「本アプリ」）の開発者は、本アプリで扱う情報と、その利用目的・保存方法を以下のとおり説明します。本アプリはアカウント登録を必要とせず、広告や行動追跡のためのSDK、第三者のアクセス解析SDKを使用しません。</p>
+      </section>
+      <section>
+        <h2>2. カメラ・写真と端末内の画像処理</h2>
+        <p>カメラ映像や選択した写真は、ライブプレビューと絵画風画像の作成のために端末内で処理します。本アプリがこれらの画像を開発者のサーバーや外部のAIサービスへ送信することはなく、開発者が閲覧・収集したり、モデルの学習に使用したりすることもありません。</p>
+        <p style="margin-top:10px;">一部の画風では、AppleのVisionを使って顔の位置や人物の領域を端末内で検出します。これは描画の調整に使用するもので、個人の識別や本人認証は行いません。ライブ映像や検出情報を開発者に送信することはありません。</p>
+      </section>
+      <section>
+        <h2>3. 権限</h2>
+        <p>カメラの利用にはカメラへのアクセス許可が必要です。写真の読み込みはiOSの写真選択画面を使い、ユーザーが選んだ写真だけを受け取ります。完成画像を写真ライブラリへ保存する際には、写真の追加許可を求めます。</p>
+        <p style="margin-top:10px;">許可はiOSの「設定」で変更できます。カメラを許可しない場合はライブ撮影が、写真の追加を許可しない場合は写真ライブラリへの保存が利用できません。</p>
+      </section>
+      <section>
+        <h2>4. 端末内に保存する情報と削除方法</h2>
+        <p>本アプリは、完成画像と処理記録をアプリ専用の保存領域に保持します。処理記録には画風、画像サイズ、処理時間、顔の検出数、人物領域の割合などが含まれます。これらは端末内の処理結果の記録であり、開発者への送信やアクセス解析には使用しません。設定と無料保存枠の判定に必要な保存日も端末内に記録します。</p>
+        <p style="margin-top:10px;">アプリ内の保存データは本アプリを削除すると端末から削除されます（アプリの取り除きによるデータ保持とは異なります）。現在、アプリ内にこれらを個別に削除する機能はありません。写真ライブラリへ保存した画像はアプリを削除しても残るため、写真アプリで削除してください。</p>
+        <p style="margin-top:10px;">iCloud写真や端末のバックアップを有効にしている場合、画像やアプリデータがAppleのサービスに保存されることがあります。バックアップ上のデータの管理・削除は、Appleの設定と手順に従ってください。</p>
+      </section>
+      <section>
+        <h2>5. アプリ内購入</h2>
+        <p>買い切り商品の購入、商品情報の取得、購入済み状態の確認・復元にはAppleのStoreKitを使用します。本アプリはAppleから提供された購入・取引情報を、無制限保存の利用可否の判定に使用します。開発者がカード番号などの決済情報を取得・保存することはありません。</p>
+        <p style="margin-top:10px;">Appleによる情報の取り扱いは、<a class="link" href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Appleのプライバシーポリシー</a>に従います。購入と復元には通信が必要な場合があります。</p>
+      </section>
+      <section>
+        <h2>6. 外部サイトとお問い合わせ</h2>
+        <p>参照作品の出典リンクや、この法務ページ、お問い合わせ先を開くと、各サービスの規約とプライバシーポリシーが適用されます。このページはGitHub Pagesで公開しており、GitHubはサイト提供・安全管理のためにIPアドレス等を記録する場合があります。詳しくは<a class="link" href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHubのプライバシー声明</a>をご確認ください。これらのページに独自のアクセス解析や広告は設置していません。</p>
+        <p style="margin-top:10px;">お問い合わせで提供された情報は、回答と問題解決に必要な範囲で使用します。外部の連絡サービスにはそのサービスのポリシーが適用されます。写真や決済情報など、対応に不要な個人情報は送信しないでください。</p>
+      </section>
+      <section>
+        <h2>7. ポリシーの変更</h2>
+        <p>機能や情報の取り扱いが変わる場合は、このページと更新日を更新します。重要な変更は、必要に応じてアプリ内などでお知らせし、法令上必要な場合は同意を求めます。</p>
+      </section>
+      <section>
+        <h2>8. お問い合わせ</h2>
+        <p>本ポリシーや情報の取り扱いに関するご質問は、開発者のXアカウント <a class="link" href="https://x.com/AI_PdM_Nullpo" target="_blank" rel="noopener">@AI_PdM_Nullpo</a> までお問い合わせください。</p>
+      </section>
+    </div>
+    <div class="en" lang="en" hidden>
+      <h1>Privacy Policy</h1>
+      <p class="meta">Last updated: October 10, 2026</p>
+      <section>
+        <h2>1. About This Policy</h2>
+        <p>The developer of Paintlit (the “App”) explains below what information the App handles, why it is used, and how it is stored. The App does not require an account and does not use advertising, behavioral tracking, or third-party analytics SDKs.</p>
+      </section>
+      <section>
+        <h2>2. Camera, Photos, and On-Device Processing</h2>
+        <p>Camera frames and photos you select are processed on your device to provide the live preview and create painting-style images. The App does not send these images to developer servers or external AI services. The developer does not view or collect them or use them to train models.</p>
+        <p style="margin-top:10px;">Some styles use Apple Vision to detect face locations and person regions on your device to adjust rendering. This does not identify individuals or authenticate users. Live footage and detection information are not sent to the developer.</p>
+      </section>
+      <section>
+        <h2>3. Permissions</h2>
+        <p>Camera access requires your permission. Photos are imported through the iOS photo picker, which gives the App only the photos you select. The App requests permission to add photos when you save a finished image to your photo library.</p>
+        <p style="margin-top:10px;">You can change permissions in iOS Settings. Without camera permission, live capture is unavailable; without permission to add photos, saving to your photo library is unavailable.</p>
+      </section>
+      <section>
+        <h2>4. Local Storage and Deletion</h2>
+        <p>The App keeps finished images and processing records in its private storage on your device. Records include the style, image dimensions, processing time, number of detected faces, and proportion of the image identified as a person region. These records document on-device processing; they are not sent to the developer or used for analytics. Settings and the date needed to determine your free save allowance are also stored locally.</p>
+        <p style="margin-top:10px;">Deleting the App removes its local app data from your device; offloading the App retains that data. There is currently no in-app control to delete these records individually. Images saved to your photo library remain after you delete the App and must be deleted in Photos.</p>
+        <p style="margin-top:10px;">If you enable iCloud Photos or device backups, Apple’s services may store images or app data. Manage or delete backed-up data using Apple’s settings and instructions.</p>
+      </section>
+      <section>
+        <h2>5. In-App Purchases</h2>
+        <p>The App uses Apple StoreKit to make the one-time purchase, obtain product information, and check or restore purchases. Purchase and transaction information provided by Apple is used to determine access to Unlimited Saves. The developer does not receive or store payment-card details.</p>
+        <p style="margin-top:10px;">Apple handles information under <a class="link" href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple’s Privacy Policy</a>. Purchases and restoration may require an internet connection.</p>
+      </section>
+      <section>
+        <h2>6. External Websites and Support</h2>
+        <p>When you open artwork source links, legal pages, or support services, their terms and privacy policies apply. This page is hosted on GitHub Pages. GitHub may log IP addresses and other information to operate and secure its service; see the <a class="link" href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub General Privacy Statement</a>. These pages do not include our own analytics or advertising.</p>
+        <p style="margin-top:10px;">Information you provide when contacting the developer is used as needed to answer your inquiry and resolve the issue. The privacy policy of the external contact service also applies. Please do not send photos, payment details, or other personal information that is unnecessary for support.</p>
+      </section>
+      <section>
+        <h2>7. Policy Updates</h2>
+        <p>If the App’s features or information practices change, this page and its update date will be revised. Important changes will be communicated through the App or other appropriate means, and consent will be requested where required by law.</p>
+      </section>
+      <section>
+        <h2>8. Contact</h2>
+        <p>For questions about this policy or information handling, contact the developer on X at <a class="link" href="https://x.com/AI_PdM_Nullpo" target="_blank" rel="noopener">@AI_PdM_Nullpo</a>.</p>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <span class="ja">&copy; 2026 Paintlit &nbsp;|&nbsp; <a href="terms.html" style="color:inherit;text-decoration:underline;">利用規約</a></span>
+    <span class="en" lang="en" hidden>&copy; 2026 Paintlit &nbsp;|&nbsp; <a href="terms.html?lang=en" style="color:inherit;text-decoration:underline;">Terms of Use</a></span>
+  </footer>
+  <script>
+    function setLang(lang) {
+      const isEn = lang === 'en';
+      document.querySelectorAll('.ja').forEach(el => { el.hidden = isEn; });
+      document.querySelectorAll('.en').forEach(el => { el.hidden = !isEn; });
+      document.getElementById('html-root').lang = isEn ? 'en' : 'ja';
+      ['ja', 'en'].forEach(code => {
+        const active = code === (isEn ? 'en' : 'ja');
+        const button = document.getElementById('btn-' + code);
+        button.classList.toggle('active', active);
+        button.setAttribute('aria-pressed', String(active));
+      });
+      document.title = isEn ? 'Privacy Policy — Paintlit' : 'プライバシーポリシー — Paintlit';
+      const url = new URL(window.location);
+      isEn ? url.searchParams.set('lang', 'en') : url.searchParams.delete('lang');
+      history.replaceState({}, '', url);
+    }
+    if (new URLSearchParams(window.location.search).get('lang') === 'en') setLang('en');
+  </script>
+</body>
+</html>
