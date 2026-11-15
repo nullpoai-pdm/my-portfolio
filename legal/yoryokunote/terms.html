@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja" id="html-root">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>利用規約 — 余力ノート</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/my-portfolio/favicon.ico" sizes="any">
+  <style>
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    :root { --bg:#F5F5F3; --text:#111110; --muted:#6B6B68; --faint:#B2B1AE; --border:rgba(0,0,0,.08); }
+    body { font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Noto Sans JP",sans-serif; background:var(--bg); color:var(--text); line-height:1.75; -webkit-font-smoothing:antialiased; }
+    nav { position:sticky; top:0; z-index:100; min-height:52px; padding:8px 24px; display:flex; align-items:center; gap:12px; backdrop-filter:blur(20px) saturate(160%); -webkit-backdrop-filter:blur(20px) saturate(160%); background:rgba(245,245,243,.88); border-bottom:1px solid var(--border); }
+    nav a { font-size:13px; color:var(--muted); text-decoration:none; }
+    nav span { color:var(--faint); font-size:13px; }
+    .crumb { color:var(--text); font-weight:700; }
+    .lang-toggle { margin-left:auto; display:flex; gap:4px; flex-shrink:0; }
+    .lang-btn { font-size:11px; font-weight:700; padding:3px 9px; border:1px solid var(--border); border-radius:4px; background:transparent; cursor:pointer; color:var(--muted); letter-spacing:.06em; font-family:inherit; }
+    .lang-btn.active { background:var(--text); color:#fff; border-color:var(--text); }
+    main { max-width:680px; margin:0 auto; padding:48px 24px 80px; }
+    .badge { display:inline-block; font-size:11px; font-weight:700; background:var(--text); color:#fff; padding:3px 10px; border-radius:100px; letter-spacing:.08em; text-transform:uppercase; margin-bottom:16px; }
+    h1 { font-size:26px; font-weight:700; margin-bottom:8px; }
+    .meta { font-size:13px; color:var(--muted); margin-bottom:40px; }
+    section { margin-bottom:36px; }
+    h2 { font-size:15px; font-weight:700; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+    p, li { font-size:14px; color:#333; line-height:1.8; }
+    ul { padding-left:1.4em; margin-top:10px; }
+    li { margin-bottom:4px; }
+    a.link { color:#06c; text-decoration:underline; }
+    footer { text-align:center; font-size:12px; color:var(--faint); padding:24px; }
+    [hidden] { display:none !important; }
+    @media (max-width:560px) { nav .page-label { display:none; } main { padding-top:36px; } }
+    </style>
+</head>
+<body>
+  <nav aria-label="Navigation">
+    <a href="/my-portfolio/">Works</a><span>/</span>
+    <span class="crumb ja">余力ノート</span><span class="crumb en" lang="en" hidden>Yoryoku Note</span><span class="page-label">/</span>
+    <span class="page-label ja">利用規約</span><span class="page-label en" lang="en" hidden>Terms of Use</span>
+    <div class="lang-toggle" aria-label="Language">
+      <button id="btn-ja" class="lang-btn active" type="button" aria-pressed="true" onclick="setLang('ja')">JA</button>
+      <button id="btn-en" class="lang-btn" type="button" aria-pressed="false" onclick="setLang('en')">EN</button>
+    </div>
+  </nav>
+  <main>
+    <div class="badge ja">余力ノート</div><div class="badge en" lang="en" hidden>Yoryoku Note</div>
+    <div class="ja" lang="ja">
+      <h1>利用規約</h1>
+      <p class="meta">最終更新日：2026年11月15日</p>
+      <section>
+        <h2>1. 本規約の適用</h2>
+        <p>この利用規約は、nullpoaiが提供するiOSアプリ「余力ノート」の利用に適用します。アプリの使用許諾には<a class="link" href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Appleの標準エンドユーザー使用許諾契約（標準EULA）</a>が適用されます。</p>
+      </section>
+      <section>
+        <h2>2. 余力の記録とトリセツ</h2>
+        <p>余力ノートは、日々の余力や休み方を記録し、振り返るためのアプリです。「わたしのトリセツ」は、入力した特性やお願いを記録のまとめと一緒に、家族や職場の人に伝えるための文書です。</p>
+        <p style="margin-top:10px;">アプリの表示やトリセツは、医学的な評価・診断・治療の提案を行いません。トリセツを公的な証明書や専門家による評価として使用することはできません。</p>
+      </section>
+      <section>
+        <h2>3. Proの購入・復元・返金</h2>
+        <p>余力や休み方の記録、トリセツの閲覧・編集・プレビューは無料です。Proは買い切りで、場面ごとの休み方の保存と呼び出し、「助かった」休み方の再利用、場面・タグでの記録の絞り込み、トリセツのPDF・画像への書き出しを利用できます。購入前にApp Storeが表示する価格をご確認ください。</p>
+        <p style="margin-top:10px;">購入時と同じApple Accountで「設定」の「購入を復元」を利用できます。決済と返金の申請はAppleが扱います。返金をご希望の場合は<a class="link" href="https://support.apple.com/ja-jp/118223">Appleの返金手順</a>をご確認ください。Appleが購入の利用権を取り消した場合は、Pro機能を利用できなくなります。</p>
+      </section>
+      <section>
+        <h2>4. 記録と共有</h2>
+        <p>記録や自分で入力した文章の権利は、利用者または元の権利者に残ります。第三者の情報を記録・共有する場合は、その人のプライバシーや権利に配慮し、必要な許可を得てください。送信前に書き出した内容と共有先を確認してください。</p>
+        <p style="margin-top:10px;">端末の紛失や故障、アプリの削除に備え、必要な記録はご自身でバックアップまたは書き出してください。Proの購入を復元しても記録は戻りません。情報の扱いは<a class="link" href="privacy.html?lang=ja">プライバシーポリシー</a>をご確認ください。</p>
+      </section>
+      <section>
+        <h2>5. 規約の変更とお問い合わせ</h2>
+        <p>規約を変更するときは本ページを更新します。本規約は日本法に準拠します。ただし、お住まいの地域で適用される強行法規による消費者の権利は制限されません。お問い合わせは開発者のXアカウント <a class="link" href="https://x.com/AI_PdM_Nullpo" target="_blank" rel="noopener">@AI_PdM_Nullpo</a> へご連絡ください。</p>
+      </section>
+    </div>
+    <div class="en" lang="en" hidden>
+      <h1>Terms of Use</h1>
+      <p class="meta">Last updated: November 15, 2026</p>
+      <section>
+        <h2>1. Scope of these terms</h2>
+        <p>These Terms of Use apply to Yoryoku Note, the iOS app offered by nullpoai. Use of the app is licensed under <a class="link" href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple’s Standard End User License Agreement</a>.</p>
+      </section>
+      <section>
+        <h2>2. Energy records and the personal guide</h2>
+        <p>Yoryoku Note helps you log and review your energy levels and ways to rest. The personal guide brings your records together with the traits and requests you enter so you can share them with family or people at work.</p>
+        <p style="margin-top:10px;">The app and personal guide do not provide medical assessments, diagnoses, or treatment recommendations. The personal guide cannot be used as an official certificate or a professional assessment.</p>
+      </section>
+      <section>
+        <h2>3. Pro purchases, restoration, and refunds</h2>
+        <p>Logging energy and rest outcomes, and viewing, editing, and previewing the personal guide are free. A one-time Pro purchase lets you save and recall rest choices by situation, reuse rest choices marked as helpful, filter records by situation or tag, and export the personal guide as a PDF or images. Check the price shown by the App Store before buying.</p>
+        <p style="margin-top:10px;">Use Restore Purchases in Settings with the Apple Account used to buy Pro. Apple handles payments and refund requests. To request a refund, follow <a class="link" href="https://support.apple.com/en-us/118223">Apple’s refund instructions</a>. If Apple revokes the purchase entitlement, Pro features will no longer be available.</p>
+      </section>
+      <section>
+        <h2>4. Records and sharing</h2>
+        <p>Rights to your records and the text you enter remain with you or the original rights holder. If you record or share information about someone else, respect their privacy and rights and obtain any permission you need. Review the contents and destination before sharing.</p>
+        <p style="margin-top:10px;">Back up or export the records you need in case you lose or damage your device or delete the app. Restoring Pro does not restore your records. See the <a class="link" href="privacy.html?lang=en">Privacy Policy</a> for how information is handled.</p>
+      </section>
+      <section>
+        <h2>5. Changes and contact</h2>
+        <p>We will update this page when these terms change. Japanese law governs these terms without limiting mandatory consumer protections that apply where you live. For questions, contact the developer on X at <a class="link" href="https://x.com/AI_PdM_Nullpo" target="_blank" rel="noopener">@AI_PdM_Nullpo</a>.</p>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <span class="ja">&copy; 2026 nullpoai &nbsp;|&nbsp; <a href="privacy.html" style="color:inherit;text-decoration:underline;">プライバシーポリシー</a></span>
+    <span class="en" lang="en" hidden>&copy; 2026 nullpoai &nbsp;|&nbsp; <a href="privacy.html?lang=en" style="color:inherit;text-decoration:underline;">Privacy Policy</a></span>
+  </footer>
+  <script>
+    function setLang(lang) {
+      const isEn = lang === 'en';
+      document.querySelectorAll('.ja').forEach(el => { el.hidden = isEn; });
+      document.querySelectorAll('.en').forEach(el => { el.hidden = !isEn; });
+      document.getElementById('html-root').lang = isEn ? 'en' : 'ja';
+      ['ja', 'en'].forEach(code => {
+        const active = code === (isEn ? 'en' : 'ja');
+        const button = document.getElementById('btn-' + code);
+        button.classList.toggle('active', active);
+        button.setAttribute('aria-pressed', String(active));
+      });
+      document.title = isEn ? 'Terms of Use — Yoryoku Note' : '利用規約 — 余力ノート';
+      const url = new URL(window.location);
+      isEn ? url.searchParams.set('lang', 'en') : url.searchParams.delete('lang');
+      history.replaceState({}, '', url);
+    }
+    if (new URLSearchParams(window.location.search).get('lang') === 'en') setLang('en');
+  </script>
+</body>
+</html>

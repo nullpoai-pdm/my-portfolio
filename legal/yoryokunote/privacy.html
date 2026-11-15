@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja" id="html-root">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー — 余力ノート</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/my-portfolio/favicon.ico" sizes="any">
+  <style>
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    :root { --bg:#F5F5F3; --text:#111110; --muted:#6B6B68; --faint:#B2B1AE; --border:rgba(0,0,0,.08); }
+    body { font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Noto Sans JP",sans-serif; background:var(--bg); color:var(--text); line-height:1.75; -webkit-font-smoothing:antialiased; }
+    nav { position:sticky; top:0; z-index:100; min-height:52px; padding:8px 24px; display:flex; align-items:center; gap:12px; backdrop-filter:blur(20px) saturate(160%); -webkit-backdrop-filter:blur(20px) saturate(160%); background:rgba(245,245,243,.88); border-bottom:1px solid var(--border); }
+    nav a { font-size:13px; color:var(--muted); text-decoration:none; }
+    nav span { color:var(--faint); font-size:13px; }
+    .crumb { color:var(--text); font-weight:700; }
+    .lang-toggle { margin-left:auto; display:flex; gap:4px; flex-shrink:0; }
+    .lang-btn { font-size:11px; font-weight:700; padding:3px 9px; border:1px solid var(--border); border-radius:4px; background:transparent; cursor:pointer; color:var(--muted); letter-spacing:.06em; font-family:inherit; }
+    .lang-btn.active { background:var(--text); color:#fff; border-color:var(--text); }
+    main { max-width:680px; margin:0 auto; padding:48px 24px 80px; }
+    .badge { display:inline-block; font-size:11px; font-weight:700; background:var(--text); color:#fff; padding:3px 10px; border-radius:100px; letter-spacing:.08em; text-transform:uppercase; margin-bottom:16px; }
+    h1 { font-size:26px; font-weight:700; margin-bottom:8px; }
+    .meta { font-size:13px; color:var(--muted); margin-bottom:40px; }
+    section { margin-bottom:36px; }
+    h2 { font-size:15px; font-weight:700; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+    p, li { font-size:14px; color:#333; line-height:1.8; }
+    ul { padding-left:1.4em; margin-top:10px; }
+    li { margin-bottom:4px; }
+    a.link { color:#06c; text-decoration:underline; }
+    footer { text-align:center; font-size:12px; color:var(--faint); padding:24px; }
+    [hidden] { display:none !important; }
+    @media (max-width:560px) { nav .page-label { display:none; } main { padding-top:36px; } }
+    </style>
+</head>
+<body>
+  <nav aria-label="Navigation">
+    <a href="/my-portfolio/">Works</a><span>/</span>
+    <span class="crumb ja">余力ノート</span><span class="crumb en" lang="en" hidden>Yoryoku Note</span><span class="page-label">/</span>
+    <span class="page-label ja">プライバシーポリシー</span><span class="page-label en" lang="en" hidden>Privacy Policy</span>
+    <div class="lang-toggle" aria-label="Language">
+      <button id="btn-ja" class="lang-btn active" type="button" aria-pressed="true" onclick="setLang('ja')">JA</button>
+      <button id="btn-en" class="lang-btn" type="button" aria-pressed="false" onclick="setLang('en')">EN</button>
+    </div>
+  </nav>
+  <main>
+    <div class="badge ja">余力ノート</div><div class="badge en" lang="en" hidden>Yoryoku Note</div>
+    <div class="ja" lang="ja">
+      <h1>プライバシーポリシー</h1>
+      <p class="meta">最終更新日：2026年11月15日</p>
+      <section>
+        <h2>1. 本アプリと開発者</h2>
+        <p>余力ノートは、日々の余力や休み方を記録し、振り返るためのiOSアプリです。開発者はnullpoaiです。アカウント登録は不要です。本アプリは広告、広告トラッキング、利用状況の解析SDKを使用しません。</p>
+      </section>
+      <section>
+        <h2>2. 端末に保存する情報</h2>
+        <p>余力、日時、場面、タグ、メモ、休み方とその結果、場面別に保存した休み方、「わたしのトリセツ」の入力内容、外観設定を端末に保存します。以前のバージョンで入力した予定や休憩がある場合は、設定から確認できます。</p>
+        <p style="margin-top:10px;">記録の保存・表示・集計とトリセツの作成は端末内で行います。開発者のサーバーや外部のAIサービスに記録を送信することはありません。アプリ独自のクラウド同期は行いません。iOSのバックアップや機種変更時のデータ移行は、端末とAppleの設定に従います。</p>
+      </section>
+      <section>
+        <h2>3. 書き出しと共有</h2>
+        <p>CSVやトリセツのPDF・画像には、本人の記録や入力内容が含まれることがあります。共有シートを使うと、選んだアプリ、相手、保存先にファイルが渡ります。共有後は共有先の取り扱いが適用されます。</p>
+      </section>
+      <section>
+        <h2>4. 保存期間と削除</h2>
+        <p>記録は利用者が削除するまで端末に保存されます。余力の記録や休み方の履歴は詳細画面から個別に削除できます。「設定」の「すべてのデータを削除」では、記録、保存した休み方、以前の予定・休憩、トリセツを削除し、場面とタグを初期状態に戻せます。</p>
+        <p style="margin-top:10px;">既存のバックアップ、書き出したファイル、共有先に渡したコピーは各保存先で管理してください。</p>
+      </section>
+      <section>
+        <h2>5. App Storeでの購入と復元</h2>
+        <p>Proの購入と復元はAppleが処理します。アプリはStoreKitが提供する購入情報を使い、Proを利用できるか確認します。開発者は支払いカード情報を取得しません。購入を復元しても記録やトリセツは復元されません。詳しくは<a class="link" href="https://www.apple.com/jp/legal/privacy/">Appleのプライバシーポリシー</a>をご確認ください。</p>
+      </section>
+      <section>
+        <h2>6. このウェブページとお問い合わせ</h2>
+        <p>このページはGitHub Pagesで公開しています。GitHubは安全確保のためにアクセス元のIPアドレスを記録します。詳しくは<a class="link" href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHubのプライバシーに関する声明</a>をご確認ください。</p>
+        <p style="margin-top:10px;">問い合わせで受け取った情報は、返信や問題への対応に使います。プライバシーに関する質問や、問い合わせで提供した情報の削除の相談は、開発者のXアカウント <a class="link" href="https://x.com/AI_PdM_Nullpo" target="_blank" rel="noopener">@AI_PdM_Nullpo</a> へご連絡ください。公開の投稿には記録や決済情報を含めないでください。情報の扱いが変わった場合は、このページと更新日を見直します。</p>
+      </section>
+    </div>
+    <div class="en" lang="en" hidden>
+      <h1>Privacy Policy</h1>
+      <p class="meta">Last updated: November 15, 2026</p>
+      <section>
+        <h2>1. About the app and its developer</h2>
+        <p>Yoryoku Note is an iOS app for logging and reviewing energy levels and ways to rest. It is developed by nullpoai. The app requires no account and uses no ads, advertising trackers, or analytics SDKs.</p>
+      </section>
+      <section>
+        <h2>2. Information stored on your device</h2>
+        <p>The app stores energy levels, dates and times, situations, tags, notes, rest choices and outcomes, rest choices saved by situation, personal guide entries, and appearance settings on your device. Plans and breaks from earlier versions can be viewed in Settings.</p>
+        <p style="margin-top:10px;">The app saves, displays, and summarizes records and creates the personal guide on your device. It does not send records to the developer’s servers or to external AI services. The app has no cloud sync of its own. iOS backups and device migration depend on your device and Apple settings.</p>
+      </section>
+      <section>
+        <h2>3. Exports and sharing</h2>
+        <p>CSV exports and PDF or image exports of your personal guide may contain your records and personal notes. When you use the iOS share sheet, the file is passed to the app, person, or location you choose. The recipient or destination then handles the file under its own practices.</p>
+      </section>
+      <section>
+        <h2>4. Retention and deletion</h2>
+        <p>Records remain on your device until you delete them. You can delete individual energy or rest history entries from their detail screens. Delete All Data in Settings deletes records, saved rest choices, earlier plans and breaks, and your personal guide. It also resets situations and tags to their defaults.</p>
+        <p style="margin-top:10px;">Manage existing backups, exported files, and copies you have already shared at their respective destinations.</p>
+      </section>
+      <section>
+        <h2>5. App Store purchases and restoration</h2>
+        <p>Apple processes Pro purchases and restorations. The app uses purchase information supplied by StoreKit to check access to Pro. The developer does not receive payment card details. Restoring a purchase does not restore your records or personal guide. See <a class="link" href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a> for details.</p>
+      </section>
+      <section>
+        <h2>6. This website and contacting us</h2>
+        <p>This page is hosted on GitHub Pages. GitHub logs visitors’ IP addresses for security purposes. See the <a class="link" href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a> for details.</p>
+        <p style="margin-top:10px;">We use the information you provide in an inquiry to respond and address the issue. For privacy questions or to ask about deleting information you provided in an inquiry, contact the developer on X at <a class="link" href="https://x.com/AI_PdM_Nullpo" target="_blank" rel="noopener">@AI_PdM_Nullpo</a>. Please do not include your records or payment information in public posts. If our practices change, we will update this page and its revision date.</p>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <span class="ja">&copy; 2026 nullpoai &nbsp;|&nbsp; <a href="terms.html" style="color:inherit;text-decoration:underline;">利用規約</a></span>
+    <span class="en" lang="en" hidden>&copy; 2026 nullpoai &nbsp;|&nbsp; <a href="terms.html?lang=en" style="color:inherit;text-decoration:underline;">Terms of Use</a></span>
+  </footer>
+  <script>
+    function setLang(lang) {
+      const isEn = lang === 'en';
+      document.querySelectorAll('.ja').forEach(el => { el.hidden = isEn; });
+      document.querySelectorAll('.en').forEach(el => { el.hidden = !isEn; });
+      document.getElementById('html-root').lang = isEn ? 'en' : 'ja';
+      ['ja', 'en'].forEach(code => {
+        const active = code === (isEn ? 'en' : 'ja');
+        const button = document.getElementById('btn-' + code);
+        button.classList.toggle('active', active);
+        button.setAttribute('aria-pressed', String(active));
+      });
+      document.title = isEn ? 'Privacy Policy — Yoryoku Note' : 'プライバシーポリシー — 余力ノート';
+      const url = new URL(window.location);
+      isEn ? url.searchParams.set('lang', 'en') : url.searchParams.delete('lang');
+      history.replaceState({}, '', url);
+    }
+    if (new URLSearchParams(window.location.search).get('lang') === 'en') setLang('en');
+  </script>
+</body>
+</html>
